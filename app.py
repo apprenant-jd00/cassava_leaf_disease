@@ -6,13 +6,12 @@ from tensorflow.keras.preprocessing import image
 import os
 
 
-
-
 app = Flask(__name__)
-model = load_model('cropnet_1.h5', custom_objects={'KerasLayer': hub.KerasLayer})
-disease_names = ['Cassava Bacterial Blight', 'Cassava Brown Streak Disease', 'Cassava Green Mottle', 'Cassava Mosaic Disease', 'Healthy']
-uploaded_folder="C:/Users/justj/OneDrive/Desktop/Cassava-Leaf-Disease-Detection/static/images"
-
+model = load_model('cropnet_1.h5', custom_objects={
+                   'KerasLayer': hub.KerasLayer})
+disease_names = ['Cassava Bacterial Blight', 'Cassava Brown Streak Disease',
+                 'Cassava Green Mottle', 'Cassava Mosaic Disease', 'Healthy']
+uploaded_folder = "C:/Users/justj/OneDrive/Desktop"
 
 
 # function to process image and predict results
@@ -33,29 +32,35 @@ def process_predict(image_path, model):
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-  if request.method == 'POST':
+    if request.method == 'POST':
         # name inside files and in html input should match
         image_file = request.files['file']
         if image_file:
-                filename = image_file.filename
-                file_path = os.path.join( uploaded_folder, filename)
-                image_file.save(file_path)
-                # prediction
-                pred, pred_proba = process_predict(file_path, model)
-                if pred_proba > 45:
-                  return render_template('prediction.html', prediction=pred, prediction_probability=pred_proba)
-                else:
-                    return render_template('false_pred.html')  
-  return render_template("index.html")
+            filename = image_file.filename
+            file_path = os.path.join(uploaded_folder, filename)
+            image_file.save(file_path)
+            # prediction
+            pred, pred_proba = process_predict(file_path, model)
+            if pred_proba > 45:
+                return render_template('prediction.html', prediction=pred, prediction_probability=pred_proba)
+            else:
+                return render_template('false_pred.html')
+    return render_template("index.html")
 
 
 @app.route('/Categories')
 def categories_page():
     return render_template('categories.html')
 
+
 @app.route('/About')
 def about_page():
     return render_template("about.html")
+
+
+@app.route('/Cassava')
+def cassava():
+    return render_template("cassava.html")
 
 
 if __name__ == '__main__':
