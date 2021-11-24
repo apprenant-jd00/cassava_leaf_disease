@@ -58,9 +58,9 @@ def about_page():
     return render_template("about.html")
 
 
-@app.route('/Cassava')
-def cassava():
-    return render_template("cassava.html")
+@app.route('/More')
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == '__main__':

@@ -1,30 +1,30 @@
-<!--extend base file-->
-{% extends 'base.html' %}
-
-<!--title section-->
-{% block title %}
-Prediction
-{% endblock %}
-
-<!-- content section-->
-{% block content %}
+{% extends "layout.html" %}
+{% block body %}
 
 <!--  prediction content here -->
 
-<div class="prediction">
-    <h1>Predicted Results</h1>
-    <div class="predicted-class">
-        <h2>Prediction Probability: {{prediction_probability}} %</h2>
-        <h2>Prediction: {{prediction}}</h2>
-    </div>
-    <h2 class="retry"><a href="{{home_page}}">Try Again</a></h2>
-</div>
+<main>
 
-<footer class="foot-style">
-    <div>
-        <strong>
-      &copy; Copyright </strong>. All Rights Reserved
-    </div>
-</footer>
+    <div class="mx-auto tm-content-container">
+        <div class="row mt-3 mb-5 pb-3">
+            <div class="col-12">
+                <div class="mx-auto tm-about-text-container px-3">
+                    <div class="prediction">
+                        <h1>Predicted Results</h1>
+                        <div class="predicted-class">
+
+                            <p class="mb-0">Prediction Probability: {{prediction_probability}} %</p>
+                            <p class="mb-0">Prediction: {{prediction}}</p>
+                            <p class="mb-0 retry"><a href="{{home_page}}">Try Again</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</main>
+
+</div>
 
 {% endblock %}

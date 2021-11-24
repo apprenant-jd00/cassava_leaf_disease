@@ -3,84 +3,186 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home
-    </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'main.css')}} ">
+    <title>Cassava</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-video-catalog.css') }}">
+    <!--
+
+
+-->
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="container">
-            <a class="nav-heading" href="{{ url_for('home_page') }}">Cass<span>ava</span></a>
-            <img id="mobile-cta" class="mobile-menu" src="{{url_for('static', filename='images/menu.svg')}}"
-                alt="Open navigation">
-            <nav class="nav-menu">
-                <img id="mobile-exit" class="mobile-exit" src="{{ url_for('static', filename='images/exit.svg')}}"
-                    alt="Exit navigation" />
-                <ul class="primary-nav">
-                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
-                    <li><a href="{{ url_for('cassava') }}">About Cassava</a></li>
-                    <li><a href="{{ url_for('categories_page') }}">Disease Categories</a></li>
-                    <li><a href="{{ url_for('about_page') }}">AboutProject</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="position-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">
+                        <div class="col-7 col-md-4">
+                            <a href="index.html" class="tm-bg-black text-center tm-logo-container">
+                                <!-- <i class="fas fa-video tm-site-logo mb-3"></i> -->
+                                <h1 class="tm-site-name">Cassava</h1>
+                            </a>
+                        </div>
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed"
+                                        type="button" data-toggle="collapse" data-target="#navbar-nav"
+                                        aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                        <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item active">
+                                                <a class="nav-link tm-nav-link" href="/">Home <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/About">About Cassava <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/Categories">Disease categories
+                                                    <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/More">More <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tm-welcome-container text-center text-white">
+                <div class="tm-welcome-container-inner">
+                    <!-- from here------------------------------ -->
+                    <!-- <div class="main-div">
+                        <div class="input-div">
+                            <form id="upload-image" method="post" enctype="multipart/form-data">
+                                <h2>Upload Image</h2>
+                                <label for="ImageUpload" class="image-unpload">
+                                </label>
+                                <input class="input-btn" type="file" name="file" id="ImageUpload" accept=".png, .jpg, .jpeg">
+                                <input type="submit" class="predict-btn" value="Predict">
+                            </form>
+                        </div>
+                    </div>
+                    <hr> -->
+                    <!-- to here------------------------------------ -->
+                    <p class="tm-welcome-text mb-1 text-white">Cassava Leaf Disease Classification</p>
+                    <form id="upload-image" method="post" enctype="multipart/form-data">
+                        <p class="tm-welcome-text mb-1 text-white">Upload image</p>
+                        <label for="ImageUpload" class="image-unpload">
+                        </label>
+                        <input class="input-btn" type="file" name="file" id="ImageUpload" accept=".png, .jpg, .jpeg">
+                        <!-- <p class="tm-welcome-text mb-5 text-white">This is a full-width video banner.</p> -->
+                        <input type="submit" class="predict-btn btn  tm-btn-cta" value="Predict">
+                        <!-- <a href="#content" class="btn  tm-btn-cta "> -->
+                        <!-- predict-btn -->
+                        <!-- <span>Predict</span> -->
+                        <!-- </a> -->
+                    </form>
+                </div>
+            </div>
 
-
-    <section class="hero">
-        <!-- "{{ url_for('static', filename='images/cassava-leaf2.jpg')}}" -->
-        <div class="container"
-            style="background-image: url({{url_for('static', filename='images/cassava-leaf2.jpg')}})">
-            <h3 class="main-heading">Cassava Leaf Disease Classification</h3>
-        </div>
-    </section>
-
-    <section class="hero-input">
-        <div class="main-div">
-            <div class="input-div">
-                <form id="upload-image" method="post" enctype="multipart/form-data">
-                    <h2>Upload Image</h2>
-                    <label for="ImageUpload" class="image-unpload">
-                    </label>
-                    <input class="input-btn" type="file" name="file" id="ImageUpload" accept=".png, .jpg, .jpeg">
-                    <input type="submit" class="predict-btn" value="Predict">
-                </form>
+            <div id="tm-video-container">
+                <video autoplay muted loop id="tm-video">
+                    <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
+                    <source src="{{ url_for('static', filename='video/wheat-field.mp4') }}" type="video/mp4">
+                </video>
             </div>
         </div>
-    </section>
-
-    <br>
-    <br>
-
-    <footer class="foot-style">
-        <div>
-            <strong>
-          &copy; Copyright </strong>. All Rights Reserved
-        </div>
-    </footer>
 
 
-    <!--  java script for clicking menu-->
-    <!-- to select buttons in js -->
-    <!-- event lister means allowing click on that  -->
+
+
+
+        <footer class="foot-style">
+            <div>
+                <strong>
+                    &copy; Copyright </strong>. All Rights Reserved
+            </div>
+        </footer>
+    </div> <!-- tm-content-container -->
+    </div>
+
+    </div> <!-- .tm-page-wrap -->
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script>
+        function setVideoSize() {
+            const vidWidth = 1920;
+            const vidHeight = 1080;
+            let windowWidth = window.innerWidth;
+            let newVidWidth = windowWidth;
+            let newVidHeight = windowWidth * vidHeight / vidWidth;
+            let marginLeft = 0;
+            let marginTop = 0;
 
-        const mobileBtn = document.getElementById('mobile-cta')
-        nav = document.querySelector('nav')
-        mobileBtnExit = document.getElementById('mobile-exit');
+            if (newVidHeight < 500) {
+                newVidHeight = 500;
+                newVidWidth = newVidHeight * vidWidth / vidHeight;
+            }
 
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-        })
+            if (newVidWidth > windowWidth) {
+                marginLeft = -((newVidWidth - windowWidth) / 2);
+            }
 
-        mobileBtnExit.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
+            if (newVidHeight > 720) {
+                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+            }
+
+            const tmVideo = $('#tm-video');
+
+            tmVideo.css('width', newVidWidth);
+            tmVideo.css('height', newVidHeight);
+            tmVideo.css('margin-left', marginLeft);
+            tmVideo.css('margin-top', marginTop);
+        }
+
+        $(document).ready(function () {
+            /************** Video background *********/
+
+            setVideoSize();
+
+            // Set video background size based on window size
+            let timeout;
+            window.onresize = function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(setVideoSize, 100);
+            };
+
+            // Play/Pause button for video background      
+            const btn = $("#tm-video-control-button");
+
+            btn.on("click", function (e) {
+                const video = document.getElementById("tm-video");
+                $(this).removeClass();
+
+                if (video.paused) {
+                    video.play();
+                    $(this).addClass("fas fa-pause");
+                } else {
+                    video.pause();
+                    $(this).addClass("fas fa-play");
+                }
+            });
         })
     </script>
-
 </body>
 
 </html>

@@ -1,121 +1,264 @@
-<!--extend base file-->
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-<!--title section-->
-{% block title %}
-Categories
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassava</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-video-catalog.css') }}">
+    <!--
 
-<!-- content section-->
-{% block content %}
-<!--  categories section -->
-<h2 class="cat-heading">Disease Categories</h2>
-<section class="categories-content">
 
+-->
+</head>
 
-    <div class="cat-heading">
+<body>
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="position-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">
+                        <div class="col-7 col-md-4">
+                            <a href="index.html" class="tm-bg-black text-center tm-logo-container">
+                                <!-- <i class="fas fa-video tm-site-logo mb-3"></i> -->
+                                <h1 class="tm-site-name">Cassava</h1>
+                            </a>
+                        </div>
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed"
+                                        type="button" data-toggle="collapse" data-target="#navbar-nav"
+                                        aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                        <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item active">
+                                                <a class="nav-link tm-nav-link" href="/">Home <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/About">About Cassava <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/Categories">Disease categories
+                                                    <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="/More">More <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tm-welcome-container text-center text-white">
+                <div class="tm-welcome-container-inner">
 
-        <div class="cat-list">
-            <ul>
-                <li>
-                    <img src="{{url_for('static', filename='images/CBB.jpg')}}">
-                    <br>
-                    <cite>Cassava Bacterial Blight </cite>
-                    <blockquote>Cassava with its long life cycle is affected by several
-                        diseases of which cassava bacterial blight (CBB) is the major bacterial disease in the cassava
-                        belt worldwide. The epidemiological and ecological investigations undertaken on the disease
-                        showed that the causal agent,
-                        the bacterium Xanthomonas axonopodis pv. manihotis (Xam), possesses several means for survival
-                        and dissemination that may play
-                        an important role as inoculum sources for the infection when favorable conditions occur, and the
-                        subsequent damage of the plant
-                        causing severe yield losses.
-                        <br>
-                        To know more about this disease visit <a
-                            href="https://www.intechopen.com/books/cassava/cassava-bacterial-blight-a-devastating-disease-of-cassava"
-                            target="_blank">here</a>
-                    </blockquote>
+                    <p class="tm-welcome-text mb-1 text-white">Cassava Leaf Disease Classification</p>
 
-                </li>
-                <li>
-                    <img src="{{url_for('static', filename='images/CBSD.jpg')}}">
-                    <br>
-                    <cite>Cassava Brown Streak Disease </cite>
-                    <blockquote>assava brown streak virus disease (CBSD) is a damaging disease of cassava plants, and is
-                        especially troublesome in East Africa. It was first identified in 1936 in Tanzania, and has
-                        spread
-                        to other coastal areas of East Africa, from Kenya to Mozambique. Recently, it was found that two
-                        distinct
-                        viruses are responsible for the disease: cassava brown streak virus (CBSV) and Ugandan cassava
-                        brown streak virus (UCBSV).
-                        Both have (+)ss RNA genomes, belong to the genus Ipomovirus in the family Potyviridae, and
-                        produce generally similar symptoms in
-                        infected plants.
-                        <br>
-                        To know more about this disease visit <a href="https://www.cabi.org/isc/datasheet/17107"
-                            target="_blank">here</a>
-                    </blockquote>
-                </li>
-                <li>
-                    <img src="{{url_for('static', filename='images/CGM.jpg')}}">
-                    <br>
-                    <cite>Cassava Green Mottle </cite>
-                    <blockquote>Young leaves are puckered with faint to distinct yellow spots green patterns
-                        (mosaics), and twisted margins. Usually, the shoots recover from symptoms and appear healthy.
-                        Occasionally, plants become severely stunted, edible roots are absent or, if present, they are
-                        small and
-                        woody when cooked.In the lab, the virus can be passed between plants in sap, and also in seed.
-                        Thirty percent
-                        of the seed of infected tobacco plants was infected. Whether it also spreads in seed of cassava
-                        is unknown.
-                        Seed is not used for growing cassava, so spread on Choiseul is most likely in diseased cuttings.
-                        However,
-                        there are other possibilities.
-                        <br>
-                        To know more about this disease visit <a
-                            href="https://www.pestnet.org/fact_sheets/cassava_green_mottle_068.htm"
-                            target="_blank">here</a>
-                    </blockquote>
+                </div>
+            </div>
 
-                </li>
-                <li>
-                    <img src="{{url_for('static', filename='images/CMD.jpg')}}">
-                    <br>
-                    <cite>Cassava Mosaic Disease</cite>
-                    <blockquote>Cassava is vulnerable to a broad range of diseases caused by viruses. Among them,
-                        cassava mosaic disease (CMD) is the most severe and widespread, limiting production of the
-                        crop in sub-Saharan Africa. CMD produces a variety of foliar symptoms that include mosaic,
-                        mottling,
-                        misshapen and twisted leaflets, and an overall reduction in size of leaves and plants.
-                        CMD-affected
-                        cassava plants produce few or no tubers depending on the severity of the disease and the age of
-                        the
-                        plant at the time of infection.
-                        <br>
-                        To know more about this disease visit <a
-                            href="https://www.apsnet.org/edcenter/apsnetfeatures/Pages/cassava.aspx"
-                            target="_blank">here</a>
-                    </blockquote>
-
-                </li>
-                <li>
-                    <img src="{{url_for('static', filename='images/Healthy.jpg')}}">
-                    <br>
-                    <cite>Healthy</cite>
-                    <blockquote>This is a Healthy Cassava leaf it was fourth categorie in our dataset.</blockquote>
-                </li>
-            </ul>
+            <div id="tm-video-container">
+                <video autoplay muted loop id="tm-video">
+                    <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
+                    <source src="{{ url_for('static', filename='video/wheat-field.mp4') }}" type="video/mp4">
+                </video>
+            </div>
         </div>
+
+
+
+        <main>
+
+            <div class="mx-auto tm-content-container">
+                <div class="row mt-3 mb-5 pb-3">
+                    <div class="col-12">
+                        <div class="mx-auto tm-about-text-container px-3">
+                            <h2 class="tm-page-title mb-4 tm-text-primary">Cassava Diseases</h2>
+                            <p class="mb-4">As the second-largest provider of carbohydrates in Africa, cassava is a key
+                                food security crop grown by
+                                smallholder farmers because it can withstand harsh conditions. At least 80% of household
+                                farms in Sub-Saharan
+                                Africa grow this starchy root, but viral diseases are major sources of poor yields.</p>
+                            <p class="mb-4">Existing methods of disease detection require farmers to solicit the help of
+                                government-funded agricultural
+                                experts to visually inspect and diagnose the plants. This suffers from being
+                                labor-intensive, low-supply and
+                                costly. As an added challenge, effective solutions for farmers must perform well under
+                                significant
+                                constraints, since African farmers may only have access to mobile-quality cameras with
+                                low-bandwidth.</p>
+                            <p class="mb-4">So, with the help of this website through the training set we have, we will
+                                try to classify which disease
+                                type cassava caught with the help of image processing techniques and AI.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tm-catalog-item-list">
+                <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                    <div class="position-relative tm-thumbnail-container">
+                        <img src="static/img/tn-01.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+
+                    </div>
+
+
+
+
+
+                    <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Cassava Bacterial Blight (CBB)</h3>
+                        <p class="tm-catalog-item-text">Xanthomonas axonopodis pv. manihotis is the pathogen that causes
+                            bacterial blight of cassava. Originally
+                            discovered in Brazil in 1912, the disease has followed cultivation of cassava across the
+                            world.[1] Among
+                            diseases which afflict...<a
+                                href="https://www.intechopen.com/books/cassava/cassava-bacterial-blight-a-devastating-disease-of-cassava"
+                                target="_blank">know more</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                    <div class="position-relative tm-thumbnail-container">
+                        <img src="static/img/tn-02.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+
+                    </div>
+                    <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Cassava Brown Streak Disease (CBSD)</h3>
+                        <p class="tm-catalog-item-text">Cassava brown streak virus disease (CBSD) is a damaging disease
+                            of cassava plants, and is especially
+                            troublesome in East Africa. It was first identified in 1936 in Tanzania, and has spread to
+                            other coastal
+                            areas of East...<a href="https://www.cabi.org/isc/datasheet/17107" target="_blank">know more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                    <div class="position-relative tm-thumbnail-container">
+                        <img src="static/img/tn-03.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+
+                    </div>
+                    <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Cassava Green Mottle (CGM)</h3>
+                        <p class="tm-catalog-item-text">It has not been confirmed to be a nepovirus; these are viruses
+                            that are transmitted by nematodes - hence
+                            the name. Narrow. Only known from Solomon Islands. It was first found on Choiseul in the
+                            1970s; more
+                            recently (2010)...<a href="https://www.pestnet.org/fact_sheets/cassava_green_mottle_068.htm"
+                                target="_blank">know more</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                    <div class="position-relative tm-thumbnail-container">
+                        <img src="static/img/tn-04.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+
+                    </div>
+                    <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Cassava Mosaic Disease (CMD)</h3>
+                        <p class="tm-catalog-item-text">Cassava mosaic virus is the common name used to refer to any of
+                            eleven different species of plant
+                            pathogenic virus in the genus Begomovirus. African cassava mosaic virus (ACMV), East African
+                            cassava
+                            mosaic virus (EACMV)...<a
+                                href="https://www.apsnet.org/edcenter/apsnetfeatures/Pages/cassava.aspx"
+                                target="_blank">know more</a></p>
+                    </div>
+                </div>
+
+
+
+        </main>
+
+        <footer class="foot-style">
+            <div>
+                <strong>
+                    &copy; Copyright </strong>. All Rights Reserved
+            </div>
+        </footer>
+    </div> <!-- tm-content-container -->
     </div>
-</section>
 
+    </div> <!-- .tm-page-wrap -->
 
-<footer class="foot-style">
-    <div>
-        <strong>
-      &copy; Copyright </strong>. All Rights Reserved
-    </div>
-</footer>
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script>
+        function setVideoSize() {
+            const vidWidth = 1920;
+            const vidHeight = 1080;
+            let windowWidth = window.innerWidth;
+            let newVidWidth = windowWidth;
+            let newVidHeight = windowWidth * vidHeight / vidWidth;
+            let marginLeft = 0;
+            let marginTop = 0;
 
+            if (newVidHeight < 500) {
+                newVidHeight = 500;
+                newVidWidth = newVidHeight * vidWidth / vidHeight;
+            }
 
-{% endblock %}
+            if (newVidWidth > windowWidth) {
+                marginLeft = -((newVidWidth - windowWidth) / 2);
+            }
+
+            if (newVidHeight > 720) {
+                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+            }
+
+            const tmVideo = $('#tm-video');
+
+            tmVideo.css('width', newVidWidth);
+            tmVideo.css('height', newVidHeight);
+            tmVideo.css('margin-left', marginLeft);
+            tmVideo.css('margin-top', marginTop);
+        }
+
+        $(document).ready(function () {
+            /************** Video background *********/
+
+            setVideoSize();
+
+            // Set video background size based on window size
+            let timeout;
+            window.onresize = function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(setVideoSize, 100);
+            };
+
+            // Play/Pause button for video background      
+            const btn = $("#tm-video-control-button");
+
+            btn.on("click", function (e) {
+                const video = document.getElementById("tm-video");
+                $(this).removeClass();
+
+                if (video.paused) {
+                    video.play();
+                    $(this).addClass("fas fa-pause");
+                } else {
+                    video.pause();
+                    $(this).addClass("fas fa-play");
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

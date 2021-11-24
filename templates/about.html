@@ -1,62 +1,75 @@
-<!--extend base file-->
-{% extends 'base.html' %}
+{% extends "layout.html" %}
+{% block body %}
 
-<!--title section-->
-{% block title %}
-About
-{% endblock %}
 
-<!-- content section-->
-{% block content %}
 
-<!--  About section here -->
+<!-- Page content -->
+<main>
+  <div class="container-fluid px-0">
+    <div class="mx-auto tm-content-container">
+      <div class="row mt-3 mb-5 pb-3">
+        <div class="col-12">
+          <div class="mx-auto tm-about-text-container px-3">
+            <h2 class="tm-page-title mb-4 tm-text-primary">Cassava</h2>
+            <p class="mb-4">Cassava is a root vegetable widely consumed in developing countries. It provides some
+              important nutrients
+              and resistant starch, which may have health benefits. Cassava is a nutty-flavored, starchy root vegetable
+              or
+              tuber. Native to South America, it’s a major source of calories and carbs for people in developing
+              countries.</p>
+            <p class="mb-4">It is grown in tropical regions of the world because of its ability to withstand difficult
+              growing
+              conditions — in fact, it’s one of the most drought-tolerant crops. In the United States, cassava is often
+              called yuca and may also be referred to as manioc or Brazilian
+              arrowroot.
 
-<section class="about">
+              The most commonly consumed part of cassava is the root, which is very versatile. It can be eaten whole,
+              grated or ground into flour to make bread and crackers.
 
-    <h2>About Project</h2>
-    <div class="about-div">
+              Additionally, cassava root is well known as the raw material that’s used to produce tapioca and garri, a
+              product similar to tapioca.</p>
+            <p class="mb-4">Existing methods of disease detection require farmers to solicit the help of
+              government-funded agricultural
+              experts to visually inspect and diagnose the plants. This suffers from being labor-intensive, low-supply
+              and
+              costly. As an added challenge, effective solutions for farmers must perform well under significant
+              constraints, since African farmers may only have access to mobile-quality cameras with low-bandwidth.</p>
+            <p class="mb-0">So, with the help of this website through the training set we have, we will try to classify
+              which disease
+              type cassava caught with the help of image processing techniques and AI.</p>
+            <br>
+            <h3>Benefits and nutritional profile of cassava</h3>
+            <p class="mb-0">Cassava is a calorie-rich vegetable that contains plenty of carbohydrates and key vitamins
+              and minerals.
 
-        <div>
-            <ul class="features-list">
-                <li>This is Multi-label image Classification project.</li>
-                <li>We had five <a href="{{ url_for('categories_page') }}">categories</a> images to classify using Deep
-                    learning.</li>
-                <li>After training on five different models CropNet-MobileNetV3 was best.</li>
-                <li>This web app is using CropNet from tensorflow with 88% accuracy.</li>
-                <li>For source code visit <a href="https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection"
-                        target="_blank">here</a></li>
-            </ul>
+              Cassava is a good source of vitamin C, thiamine, riboflavin, and niacin. The leaves, which are also edible
+              if
+              a person cooks them or dries them in the sun, can contain up to 25% protein.
+            </p>
+            <p class="mb-0">A 3.5-ounce (100-gram) serving of boiled cassava root contains 112 calories. 98% of these
+              are from carbs and
+              the rest are from a small amount of protein and fat.
+
+              This serving also provides fiber, as well as a few vitamins and minerals.</p>
+            <p class="mb-0">The following nutrients are found in 3.5 ounces (100 grams) of boiled cassava:</p>
+            <p class="mb-0">Calories: 112</p>
+            <p class="mb-0">Carbs: 27 grams</p>
+            <p class="mb-0">Fiber: 1 gram</p>
+            <p class="mb-0">Thiamine: 20% of the RDI</p>
+            <p class="mb-0">Phosphorus: 5% of the RDI</p>
+            <p class="mb-0">Calcium: 2% of the RDI</p>
+            <p class="mb-0">Riboflavin: 2% of the RDI</p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <h2>Tools & Libraries </h2>
-    <div class="tools-div">
 
-        <div class="sub-div">
-            <ul class="tools-list" style="list-style-image: url({{url_for('static', filename='images/bullet.svg')}})">
-                <li>Python</li>
-                <li>Tensorflow</li>
-                <li>Keras</li>
-                <li>Pandas</li>
-                <li>Matplotlib</li>
-                <li>PIL</li>
-                <li>Tensorflow-hub</li>
-                <li>Flask</li>
-                <li>Html</li>
-                <li>CSS</li>
 
-            </ul>
-        </div>
-    </div>
 
-    <footer class="foot-style">
-        <div>
-            <strong>
-          &copy; Copyright </strong>. All Rights Reserved
-        </div>
-    </footer>
+  </div>
+</main>
 
-</section>
 
 
 {% endblock %}

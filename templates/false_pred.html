@@ -1,31 +1,33 @@
-<!--extend base file-->
-{% extends 'base.html' %}
+{% extends "layout.html" %}
+{% block body %}
 
-<!--title section-->
-{% block title %}
-Prediction
-{% endblock %}
-
-<!-- content section-->
-{% block content %}
 
 <!--  prediction content here -->
 
-<div class="prediction">
-    <h1>Predicted Results</h1>
-    <div class="false-predicted-class" style="color:#641E16">
-        <h2>Model Is Not Sure About This Image</h2>
-        <h2>Please Select Image Of Cassava
-            Leaf And Try Again</h2>
-    </div>
-    <h2 class="retry"><a href="{{home_page}}">Try Again</a></h2>
-</div>
 
-<footer class="foot-style">
-    <div>
-        <strong>
-      &copy; Copyright </strong>. All Rights Reserved
-    </div>
-</footer>
+
+<main>
+
+    <div class="mx-auto tm-content-container">
+        <div class="row mt-3 mb-5 pb-3">
+            <div class="col-12">
+                <div class="mx-auto tm-about-text-container px-3">
+                    <div class="prediction">
+                        <div class="mx-auto tm-about-text-container px-3">
+                            <h2 class="tm-page-title mb-4 tm-text-primary">Predicted Results</h2>
+
+                            <p class="mb-0">Model Is Not Sure About This Image</p>
+                            <p class="mb-0">Please Select Image Of Cassava
+                                Leaf</p>
+                            <p class="mb-0 retry"><a href="{{home_page}}">Try Again</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</main>
+
 
 {% endblock %}
