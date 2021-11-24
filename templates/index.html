@@ -21,9 +21,9 @@
                     alt="Exit navigation" />
                 <ul class="primary-nav">
                     <li><a href="{{ url_for('home_page') }}">Home</a></li>
-                    <li><a href="{{ url_for('about_page') }}">AboutProject</a></li>
                     <li><a href="{{ url_for('cassava') }}">About Cassava</a></li>
-                    <li><a href="{{ url_for('categories_page') }}">Categories</a></li>
+                    <li><a href="{{ url_for('categories_page') }}">Disease Categories</a></li>
+                    <li><a href="{{ url_for('about_page') }}">AboutProject</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +34,7 @@
         <!-- "{{ url_for('static', filename='images/cassava-leaf2.jpg')}}" -->
         <div class="container"
             style="background-image: url({{url_for('static', filename='images/cassava-leaf2.jpg')}})">
-            <h1 class="main-heading">Cassava Leaf Disease Classification</h1>
+            <h3 class="main-heading">Cassava Leaf Disease Classification</h3>
         </div>
     </section>
 
@@ -55,10 +55,10 @@
     <br>
     <br>
 
-    <footer>
+    <footer class="foot-style">
         <div>
-            <p>To know more about this project go to About-Page</p>
-            <a class="footer-about" href="{{ url_for('about_page') }}">About</a>
+            <strong>
+          &copy; Copyright </strong>. All Rights Reserved
         </div>
     </footer>
 

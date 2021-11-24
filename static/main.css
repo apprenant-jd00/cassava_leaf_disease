@@ -16,7 +16,7 @@
 body {
   background: #F2F2F2;
   margin: 0;
-  font-family: poppins;
+  /* font-family: poppins; */
 }
 
 .navbar {
@@ -28,8 +28,8 @@ body {
   text-decoration: none;
   font-weight: bolder;
   color: rgb(32, 32, 32);
-  font-size: 1.8em;
-  font-family: oswald;
+  font-size: 1.5em;
+  /* font-family: oswald; */
   padding-top: .2em;
 }
 
@@ -67,7 +67,7 @@ section.hero .subheading {
 
 section.hero .main-heading {
   font-size: 6.5em;
-  font-family: 'Booter - Zero Zero';
+  /* font-family: 'Booter - Zero Zero'; */
   margin-top: .2em;
   color: #1d0200;
   padding-bottom: .1em;
@@ -84,7 +84,7 @@ section.hero-input div.main-div {
 
 section.hero-input div.main-div h2 {
   font-size: 3em;
-  font-family: Metal Mania;
+  /* font-family: Metal Mania; */
 }
 
 section.hero-input div.main-div input {
@@ -137,7 +137,7 @@ footer .footer-about {
 
 footer .footer-about p {
   font-size: 1em;
-  font-style: unset;
+  /* font-style: unset; */
   font-family: raleway;
 }
 
@@ -246,6 +246,11 @@ nav.menu-btn {
     color: #1d0200;
   /* --------------changed------------ color */
   }
+}
+
+.about-cassava{
+  margin: 10px;
+  font-weight: 20px;
 }
 
 h2.cat-heading {
@@ -389,6 +394,13 @@ section.about footer a {
   border-radius: 1em;
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.foot-style {
+  background-color: rgba(71, 71, 71, 0.788);
+  color: white;
+  padding: 8px;
+  align-items: center;
 }
 
 section.about footer a:hover {

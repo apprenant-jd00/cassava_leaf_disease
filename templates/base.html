@@ -22,12 +22,12 @@
             <nav class="nav-menu">
                 <img id="mobile-exit" class="mobile-exit" src="{{ url_for('static', filename='images/exit.svg')}}"
                     alt="Exit navigation" />
-                <ul class="primary-nav">
-                    <li><a href="{{ url_for('home_page') }}">Home</a></li>
-                    <li><a href="{{ url_for('about_page') }}">AboutProject</a></li>
-                    <li><a href="{{ url_for('cassava') }}">About Cassava</a></li>
-                    <li><a href="{{ url_for('categories_page') }}">Categories</a></li>
-                </ul>
+                    <ul class="primary-nav">
+                        <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                        <li><a href="{{ url_for('cassava') }}">About Cassava</a></li>
+                        <li><a href="{{ url_for('categories_page') }}">Disease Categories</a></li>
+                        <li><a href="{{ url_for('about_page') }}">AboutProject</a></li>
+                    </ul>
             </nav>
         </div>
     </div>
@@ -36,7 +36,7 @@
     <section class="hero">
         <div class="container"
             style="background-image: url({{url_for('static', filename='images/cassava-leaf2.jpg')}})">
-            <h1 class="main-heading">Cassava Leaf Disease Classification</h1>
+            <h3 class="main-heading">Cassava Leaf Disease Classification</h3>
         </div>
     </section>
 
