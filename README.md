@@ -11,13 +11,7 @@ may be possible to identify common diseases so they can be treated.
 suffers from being labor-intensive, low-supply and costly. As an added challenge, effective solutions for farmers must perform well under significant constraints, since
 African farmers may only have access to mobile-quality cameras with low-bandwidth.
 
-## ***Web-App Demo***:-
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/75840165/115149325-2bbd8c80-a081-11eb-98cf-44e8c6b5ac11.gif)
-
-### Mobile version:-
-
-&nbsp;&nbsp;&nbsp;<img style="padding-right=12" src="https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/app_demo/mobile1.png" width=300 height=400>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/app_demo/mobile2.png" width=300 height=400>
 
 
 ## Goal:- 
@@ -57,7 +51,7 @@ identify diseased plants, potentially saving their crops before they inflict irr
 >* Trained model is uploded [here](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/tree/main/Model)  
 
 ## Building Web-App :-
-* To create web app i used Flask and to create Web pages used HTML.
+* To create web app we used Flask and to create Web pages used HTML.
 * To style html pages used scss file.
 * Now we can input images from html using GET method.
 * Preprocess image in flask app as model required. 
