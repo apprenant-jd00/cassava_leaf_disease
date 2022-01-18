@@ -31,24 +31,23 @@ identify diseased plants, potentially saving their crops before they inflict irr
 ## ***Training***:-
 * On Sample Dataset 10K images
 
-| Model   |training score|Validation Score| Notebook Link |   
-|---------|--------------|----------------|---------------|   
-| Own CNN |  65%         |    67%         |    [link](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/Notebooks/Building_Own_CNN.ipynb)|   
-|ResNet50V2| 100%        |    70%         |    [link](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/Notebooks/ResNet.ipynb)          |   
-|InceptionResNetV2| 90%  |    70%         |    [link](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/Notebooks/InceptionResNet.ipynb) |   
+| Model   |training score|Validation Score|  
+|---------|--------------|----------------|   
+| Own CNN |  65%         |    67%         |   
+|ResNet50V2| 100%        |    70%         |   
+|InceptionResNetV2| 90%  |    70%         |  
 
 * On Full data 21k images
 
-| Model   |training score|Validation Score| Notebook Link |   
-|---------|--------------|----------------|---------------|   
-|InceptionResNetV2|  94% |    73.69%      |    [link](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/Notebooks/InceptionResNetV2.ipynb)|   
-|***CropNet-MobileNetV3***|88% |88% |[link](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/blob/main/Notebooks/Final_Model_CropNet_MobieNetV3ipynb%20(1).ipynb)|   
+| Model   |training score|Validation Score|   
+|---------|--------------|----------------|  
+|InceptionResNetV2|  94% |    73.69%      |
+|***CropNet-MobileNetV3***|88% |88% |   
 
 * ***Best Model***:-
 >* CropNet-Cassava disease classifier whose architecture is same as MobileNetV3 
 >* This was already trained of Cassava leaf's for 6 classes, Link to this model is here [Tensorflow](https://www.tensorflow.org/hub/tutorials/cropnet_cassava#:~:text=This%20notebook%20shows%20how%20to,disease%2C%20healthy%2C%20or%20unknown.)
->* We had five classes so trained this model by adding own fully connected layer.
->* Trained model is uploded [here](https://github.com/AdiShirsath/Cassava-Leaf-Disease-Detection/tree/main/Model)  
+>* We had five classes so trained this model by adding own fully connected layer.  
 
 ## Building Web-App :-
 * To create web app we used Flask and to create Web pages used HTML.
